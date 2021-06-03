@@ -6,8 +6,11 @@ string unit[] = { "", "one ", "two ", "three ", "four ","five ", "six ", "seven 
 
 string tenth[] = { "", "", "twenty ", "thirty ", "forty ","fifty ", "sixty ", "seventy ", "eighty ","ninety " };
 
+string count[] = {"","Thousand ", "Lakh ", "crore ", "Arab ", "kharab ", "Nil ", "padma ", "shankh ", "mahashankh "};
+
 string num_To_words(int no,string s){
     string str = "";
+    cout<<no<<endl;
     if (no > 19)
         str += tenth[no / 10] + unit[no % 10];
     else
@@ -20,21 +23,25 @@ string num_To_words(int no,string s){
 }
 
 string numToWords(long long int no){
-    string str ="";
 
-    str=str+ num_To_words((no/pow(10,9)) , "arab ");
- 
-    str=str+ num_To_words((no/10000000 ) % 100 , "crore ");    //crore and 10 crore places
+    string str = "";
 
-    str=str+ num_To_words((no/100000)%100 , "lakh ");       //lakh and ten lakh places
+    int length = to_string(no).length();
+    
+   if(length>3){
+       for(int i=19;i>=3;i=i-2){
+        long long tot=0;
+        tot= no/pow(10,i);
+        str=str + num_To_words(tot%100 , count[i/2]);
 
-    str=str+ num_To_words((no/1000)%100 , "thousand ");    //thousands and ten thousands place
+    }
+   }
 
-    str=str+ num_To_words((no/100)%100 , "hundred ");    //hundreads place
+   str=str+ num_To_words((no/100)%10 , "hundred ");    //hundreads place
 
-    str=str+ num_To_words((no%100) , "");    //unit and tenth place
+   str=str+ num_To_words((no%100) , "");
 
-    return str;
+   return str;
 
 }
 

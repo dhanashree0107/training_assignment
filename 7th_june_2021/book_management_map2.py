@@ -1,3 +1,11 @@
+#Book Management System to store book records like ID, Book name, Author name, Cost using map
+# Operations performed on record:
+# insert record
+# search record
+# delete record
+# display records
+#Date: 07/06/2021
+
 bookDict = {}
 
 

@@ -1,3 +1,7 @@
+/*
+to count Occurence of digit in the number
+Date: 03/06/2021
+*/
 #include<iostream>
 using namespace std;
 void occ_of_digit(long long int number,int digit){

@@ -1,3 +1,8 @@
+/*
+Problem Statement: Write a program to return if given string is palindrome or not
+Date: 07/06/2021
+*/
+
 #include<iostream>
 using namespace std;
 

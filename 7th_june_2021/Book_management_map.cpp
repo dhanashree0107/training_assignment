@@ -1,6 +1,3 @@
-// CPP program to demonstrate how a map can
-// be used to have a user defined data type
-// as key.
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -13,7 +10,6 @@ struct Test {
 }HT[10];
 
 map<Test, int> mp1;
-// We compare Test objects by their ids.
 bool operator<(const Test& t1, const Test& t2)
 {
 	return (t1.id < t2.id);

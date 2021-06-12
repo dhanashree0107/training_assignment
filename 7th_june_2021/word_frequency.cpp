@@ -1,3 +1,9 @@
+/*
+Problem statement: Write a program to count the occurence of the word in the file
+used word.txt file
+Date: 08/06/2021
+*/
+
 #include <iostream>
 #include <iomanip>
 #include <fstream>

@@ -1,3 +1,8 @@
+/*
+Problem Statement: write a program to find the given character is an alphabet or not
+Date: 02/06/2021
+*/
+
 #include<iostream>
 using namespace std;
 

@@ -1,6 +1,9 @@
 /*
     Book Management System using linked list
-
+    To store the records of books like ID , Book name, Author name, Cost
+    We can create, insert, delete, search and display the record of books
+    Can search by ID, book name or author name 
+    Date: 08/06/2021
 */
 
 #include <bits/stdc++.h>

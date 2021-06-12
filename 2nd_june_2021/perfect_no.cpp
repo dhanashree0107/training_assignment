@@ -1,3 +1,8 @@
+/*
+	finding the perfect numbers between the given range
+	Date: 03/06/2021
+*/
+
 #include<iostream>
 using namespace std;
 

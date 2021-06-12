@@ -1,3 +1,7 @@
+/*
+Problem Statement: Write a program to multiply two matrices of any size
+Date: 07/06/2021
+*/
 #include<iostream>
 using namespace std;
 

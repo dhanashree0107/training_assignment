@@ -1,3 +1,7 @@
+/*
+Program to count number of digits in the given number
+Date: 02/06/2021 
+*/
 #include<iostream>
 using namespace std;
 

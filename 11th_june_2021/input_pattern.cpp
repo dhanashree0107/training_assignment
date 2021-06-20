@@ -84,7 +84,7 @@ Enter the pattern: abc
 Enter the string: adfhjhcghjkaghjc
 Enter the pattern: a*c
 adfhjhc
-aghjc
+aghjcc
 
 
 */

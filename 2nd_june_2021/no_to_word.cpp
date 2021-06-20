@@ -37,7 +37,7 @@ string numToWords(unsigned long long int no){
         }
     }
 
-   str=str+ num_To_words((no/100)%10 , "hundred ");    //hundreads place
+   str=str+ num_To_words((no/100)%10 , "hundred ");    //hundred's place
    str=str+ num_To_words((no%100) , "");        // unit place
 
    return str;

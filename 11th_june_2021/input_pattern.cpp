@@ -69,22 +69,3 @@ int main(){
     return 0;
 }
 
-/*
-...........................OUTPUT.........................
-Enter the string: abcpaqc
-Enter the pattern: a?c
-abc
-
-Enter the string: 123abcgrdgdb
-Enter the pattern: a*
-
-Enter the string: acde
-Enter the pattern: abc
-
-Enter the string: adfhjhcghjkaghjc
-Enter the pattern: a*c
-adfhjhc
-aghjcc
-
-
-*/

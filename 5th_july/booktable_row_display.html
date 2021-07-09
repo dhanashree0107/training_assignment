@@ -27,10 +27,25 @@
             background-color: black;
         }
     </style>
+    <script type="text/javascript">
+        function func() {
+            var book_id = document.getElementById("textbox").value;
+            var table = document.getElementById("tableData");
+            var colsize = 4;
+            var firstcell;
+            for (var y = 0; y < colsize; y++) {
+                firstCell = table.rows[book_id].cells[y].innerHTML;
+                var node = document.createElement("LI");
+                var cells = document.createTextNode(firstCell);
+                node.appendChild(cells);
+                document.getElementById("record").appendChild(node);
+            }
+        }
+    </Script>
 </head>
 
 <body>
-    <table>
+    <table id="tableData">
         <caption>
             <b>Book records</b>
         </caption>
@@ -41,36 +56,41 @@
             <th>Cost</th>
         </tr>
         <tr>
-            <td>1</td>
+            <td id="bookid">1</td>
             <td>An Autobiography</td>
             <td>Jawaharlal Nehru</td>
             <td>500 /-</td>
         </tr>
         <tr>
-            <td>2</td>
+            <td id="bookid">2</td>
             <td>An idealist View of Life</td>
             <td>Dr.S. Radhakrishnan</td>
             <td>399 /-</td>
         </tr>
         <tr>
-            <td>3</td>
+            <td id="bookid">3</td>
             <td>Arion and the Dolphin</td>
             <td>Vikram Seth</td>
             <td>299 /-</td>
         </tr>
         <tr>
-            <td>4</td>
+            <td id="bookid">4</td>
             <td>Arthashastra</td>
             <td>Kautilya</td>
             <td>300 /-</td>
         </tr>
         <tr>
-            <td>5</td>
+            <td id="bookid">5</td>
             <td>A Secular Agenda</td>
             <td>Arun Shourie</td>
             <td>500 /-</td>
         </tr>
     </table>
+    <p>Enter the book id to fetch the record</p>
+    <input type="text" id="textbox" />
+    <button title="submit" id="button" onclick="func()">submit</button>
+    <ul id="record"></ul>
+
 </body>
 
 </html>

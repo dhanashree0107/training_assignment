@@ -1,0 +1,123 @@
+<html>
+
+<head>
+    <title>Book Library</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+        
+        table {
+            width: 100%;
+            background-color: #f1f1c1;
+        }
+        
+        table tr:nth-child(even) {
+            background-color: #eee;
+        }
+        
+        table tr:nth-child(odd) {
+            background-color: #fff;
+        }
+        
+        table th {
+            color: white;
+            background-color: black;
+        }
+    </style>
+    <script type="text/javascript">
+        function sort_table(id) {
+            var col_no = document.getElementById("textbox").value;
+            var new_col_no = parseInt(col_no);
+            new_col_no--;
+            console.log(new_col_no);
+            var table, rows, swapping, i, a, b, swap;
+            table = document.getElementById("tableData");
+            swapping = true;
+
+            while (swapping) {
+                swapping = false;
+                rows = table.rows;
+
+                for (i = 1; i < (rows.length - 1); i++) {
+
+                    swap = false;
+
+                    a = rows[i].getElementsByTagName("td")[new_col_no];
+                    b = rows[i + 1].getElementsByTagName("td")[new_col_no];
+
+                    if (id == 1) {
+                        if (a.innerHTML > b.innerHTML) {
+                            swap = true;
+                            break;
+                        }
+                    } else if (id == 2) {
+                        if (a.innerHTML < b.innerHTML) {
+                            swap = true;
+                            break;
+                        }
+
+                    }
+                }
+                if (swap) {
+
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    swapping = true;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <table id="tableData">
+        <caption>
+            <b>Book records</b>
+        </caption>
+        <tr>
+            <th id="Book ID">Book ID</th>
+            <th id="Title">Title</th>
+            <th id="Author">Author</th>
+            <th id="Cost">Cost</th>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>An Autobiography</td>
+            <td>Jawaharlal Nehru</td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>An idealist View of Life</td>
+            <td>Dr.S. Radhakrishnan</td>
+            <td>399</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Arion and the Dolphin</td>
+            <td>Vikram Seth</td>
+            <td>299</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Arthashastra</td>
+            <td>Kautilya</td>
+            <td>300</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>A Secular Agenda</td>
+            <td>Arun Shourie</td>
+            <td>500</td>
+        </tr>
+    </table>
+    <p>Enter the column number to sort the table:</p>
+    <input type="text" id="textbox" />
+    <button title="submit" id="button" onclick="sort_table(1)">ascending sort</button>
+    <button title="submit" id="button" onclick="sort_table(2)">descending sort</button>
+
+</body>
+
+</html>

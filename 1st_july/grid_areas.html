@@ -1,0 +1,55 @@
+<!Doctype html>
+<html>
+
+<head>
+	<title>Defining a grid</title>
+	<style>
+		body {
+			margin: 40px;
+		}
+
+    .header{
+      grid-area:header;
+    }
+
+    .sidebar{
+      grid-area:sidebar;
+    }
+
+    .content{
+      grid-area:content;
+      height:350px;
+    }
+
+		.wrapper {
+			display: grid;
+			grid-template-columns: 120px 120px 80%;
+      grid-template-areas:"header header header" "sidebar content content";
+			color: white;
+			grid-gap: 10px;
+
+		}
+
+		.box {
+			background-color: black;
+			color: white;
+			border-radius: 5px;
+			padding: 20px;
+			font-size: 150%;
+		}
+    .header{
+      background-color:grey;
+    }
+
+	</style>
+</head>
+
+<body>
+	<div class="wrapper">
+    <div class="box header">Header</div>
+    <div class="box sidebar">Sidebar</div>
+    <div class="box content">Content</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.searchbar i {
+    padding: 0 7.5px;
+}
+
+.search input {
+    width: 500px;
+}
+
+.video {
+    height: 185px;
+    width: 325px;
+}
+
+#card {
+    display: flex;
+    width: 100%;
+}
+
+#description {
+    padding-left: 30px;
+    margin-top: -20px;
+}

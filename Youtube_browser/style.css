@@ -22,19 +22,42 @@ body {
 
 .search input {
     width: 500px;
-}
-
-.video {
-    height: 185px;
-    width: 325px;
-}
-
-#card {
-    display: flex;
-    width: 100%;
+    border-color: black;
 }
 
 #description {
     padding-left: 30px;
     margin-top: -20px;
+}
+
+#row2 {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 20px;
+    width: fit-content;
+    justify-content: center;
+    padding: 10px;
+}
+
+#card {
+    align-content: center;
+}
+
+#card {
+    position: absolute;
+    top: 108px;
+}
+
+@media screen and (min-width: 700px) {
+    #card {
+        position: absolute;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    #card {
+        position: absolute;
+        top: 108px;
+        left: 100px;
+    }
 }

@@ -1,0 +1,9 @@
+#card {
+    display: flex;
+    white-space: pre-line;
+}
+
+#submit {
+    margin-left: 300px;
+    margin-top: 50px;
+}

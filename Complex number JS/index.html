@@ -1,0 +1,47 @@
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,intial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <title>Youtube</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+
+    <form class='form' method="POST" action="/complexNoValues">
+        <div id="card">
+            <div class="formBox">
+                <label for="real1"> Complex no 1 real: </label>
+                <input type="text" id="real1" name="real1" />
+                <br>
+                <label for="img1"> Complex no 1 img: </label>
+                <input type="text" id="img1" name="img1" />
+            </div>
+            <div id="formBox">
+                <label for="real2"> Complex no 2 real:<label> 
+            <input type="text" id="real2" name="real2" />
+            <br> 
+            <label for="img2">Complex no 2 img:</label>
+                <input type="text" id="img2" name="img2" />
+            </div>
+
+        </div>
+
+        <button type="submit" value="add" formaction="/add">addition</button>
+        <button type="submit" value="sub" formaction="/sub">subtraction</button>
+        <button type="submit" value="mul" formaction="/mul">multiplication</button>
+        <button type="submit" value="div" formaction="/div">division</button>
+    </form>
+
+
+    <form>
+        <p id="latitude"></p>
+        <p id="longitude"></p>
+    </form>
+</body>
+
+</html>

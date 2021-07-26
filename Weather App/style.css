@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+#head {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+#temp {
+    font-size: large;
+    font-weight: bold;
+}
+
+#other {
+    margin-left: 10px;
+}
+
+#city {
+    justify-content: left;
+    text-justify: right;
+}
+
+#todaysReport {
+    background-color: #FEE8F9;
+}

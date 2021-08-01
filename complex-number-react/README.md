@@ -1,5 +1,5 @@
-use script.js from Complex Number JS for the server side
-run with command "nodemon script" to the server
+use script.js from Complex Number JS for the server side.
+use command "nodemon script" to run the server
 
 
 # Getting Started with Create React App

@@ -1,6 +1,7 @@
 const express = require("express");
 var math = require('mathjs');
 const bodyParser = require("body-parser");
+var cors = require('cors')
 const { response, request } = require("express");
 const application = express()
     //var jsonParser = bodyParser.json()
@@ -13,6 +14,8 @@ application.use(
         extended: true
     })
 )
+
+application.use(cors())
 
 application.use(express.json())
 
@@ -76,7 +79,7 @@ application.post("/mul", (request, response, next) => {
     const CN1 = math.complex(request.body.real1, request.body.img1)
     const CN2 = math.complex(request.body.real2, request.body.img2)
     var muloutput = complex_num_multiply(CN1, CN2);
-    response.send(muloutput);
+    response.send({ muloutput });
 });
 
 application.post("/div", (request, response, next) => {
@@ -86,5 +89,5 @@ application.post("/div", (request, response, next) => {
     const CN1 = math.complex(request.body.real1, request.body.img1)
     const CN2 = math.complex(request.body.real2, request.body.img2)
     var divoutput = complex_num_divide(CN1, CN2);
-    response.send(divoutput);
+    response.send({ divoutput });
 });
